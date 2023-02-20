@@ -1,6 +1,6 @@
-// Круг наследует класс Фигура
+// РљСЂСѓРі РЅР°СЃР»РµРґСѓРµС‚ РєР»Р°СЃСЃ Р¤РёРіСѓСЂР°
 class Circle extends Shape {
-    private double radius; // радиус
+    private double radius; // СЂР°РґРёСѓСЃ
 
     Circle(double radius) { this.radius = radius; }
 
