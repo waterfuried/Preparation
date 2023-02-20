@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 // ÐšÑ€ÑƒÐ³ Ð½Ð°ÑÐ»ÐµÐ´ÑƒÐµÑ‚ ÐºÐ»Ð°ÑÑ Ð¤Ð¸Ð³ÑƒÑ€Ð°
 class Circle extends Shape {
     private double radius; // Ñ€Ð°Ð´Ð¸ÑƒÑ
+=======
+// Êðóã íàñëåäóåò êëàññ Ôèãóðà
+class Circle extends Shape {
+    private double radius; // ðàäèóñ
+>>>>>>> 3df2b0bf9be82d8e9a64ea6af5b028971eb97aa3
 
     Circle(double radius) { this.radius = radius; }
 
