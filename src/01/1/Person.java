@@ -1,7 +1,7 @@
 // 1. Создать builder для класса Person со следующими полями:
 // String firstName, String lastName, String middleName, String country,
 // String address, String phone, int age, String gender.
-puvlic class Person {
+public class Person {
     private String firstName,
                    lastName,
                    middleName,
