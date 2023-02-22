@@ -31,7 +31,7 @@ public class Test {
         System.out.println(linked);
         linked.removeAll(3);
         linked.getIterator().reset();
-        // не стал ломать голову, как после сброса итератора на начало первый не пропускать первый элемент
+        // не стал ломать голову, как после сброса итератора на начало не пропускать первый элемент
         while (linked.getIterator().hasNext())
             System.out.print(" "+linked.getIterator().next());
         linked.clear();

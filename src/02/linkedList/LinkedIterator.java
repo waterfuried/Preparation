@@ -22,8 +22,9 @@ public class LinkedIterator<T> implements MyIterable<T> {
 
     @Override public void moveToEnd() { current = tail; }
 
-    // после сброса позиции в начальное положение, что должно возвращаться этим методом -
-    // следующее значение или текущее? если следующее, как получить первый элемент?
+    // TODO(?): после сброса позиции итератора в начальное положение
+    //  что должно возвращаться этим методом - следующее значение или текущее?
+    //  если следующее, как получить первый элемент? вводить отдельный метод?
     @Override public T next() {
         current = current.next;
         return current.data;
@@ -37,7 +38,7 @@ public class LinkedIterator<T> implements MyIterable<T> {
         return isPresent(t) != null;
     }
 
-    public GenericLink<T> getFirstAppearance(T t) {
+    @Override public GenericLink<T> getFirstAppearance(T t) {
         current = head;
         while (current != null)
             if (current.data.equals(t))
@@ -47,7 +48,7 @@ public class LinkedIterator<T> implements MyIterable<T> {
         return null;
     }
 
-    public GenericLink<T> getLastAppearance(T t) {
+    @Override public GenericLink<T> getLastAppearance(T t) {
         current = tail;
         while (current != null)
             if (current.data.equals(t))

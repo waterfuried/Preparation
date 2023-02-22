@@ -11,9 +11,9 @@ public class MyArrayList {
 
     /** создать новый список указанной размерности
      * @param size размерность списка
-     * @throws RuntimeException если размерность списка неположительная
+     * @throws IllegalArgumentException если размерность списка неположительная
      */
-    public MyArrayList(int size) throws RuntimeException {
+    public MyArrayList(int size) throws IllegalArgumentException {
         // есть некоторая смысловая неувязка: если метод append воспринимать как альтернативу set -
         // задание значений элементов, считая с индекса 0, то можно задавать здесь емкость как 0,
         // но при этом, во избежание путаницы, метод set вообще стоит удалить, поскольку он изменяет
@@ -49,7 +49,7 @@ public class MyArrayList {
     /** получить значение по указанному индексу
      * @param idx индекс элемента списка
      * @return значение по указанному индексу
-     * @throws IndexOutOfBoundsException если индекс отрицательный или превышает расзмерность списка
+     * @throws IndexOutOfBoundsException если индекс отрицательный или превышает размерность списка
      */
     public int get(int idx) throws IndexOutOfBoundsException {
         if (idx < 0 || idx >= capacity) throw new IndexOutOfBoundsException();
@@ -59,7 +59,7 @@ public class MyArrayList {
     /** установить значение элемента списка по указанному индексу
      * @param idx индекс элемента списка
      * @param value новое значение элемента
-     * @throws IndexOutOfBoundsException если индекс отрицательный или превышает расзмерность списка
+     * @throws IndexOutOfBoundsException если индекс отрицательный или превышает размерность списка
      */
     public void set(int idx, int value) throws IndexOutOfBoundsException {
         if (idx < 0 || idx >= capacity) throw new IndexOutOfBoundsException();
@@ -176,7 +176,7 @@ public class MyArrayList {
      * @param type тип сортировки:<br>
      *             SORT_BUBBLE=пузырьковая<br>
      *             SORT_INSERT=вставками<br>
-     *             SORT_BUBBLE=выбором<br>
+     *             SORT_SELECT=выбором<br>
      * @return время сортировки, мс
      */
     public long sort(int type) {
